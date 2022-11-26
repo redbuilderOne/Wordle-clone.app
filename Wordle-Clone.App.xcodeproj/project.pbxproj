@@ -13,6 +13,8 @@
 		FF8248192932679D0048BDE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8248172932679D0048BDE6 /* Main.storyboard */; };
 		FF82481B2932679F0048BDE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF82481A2932679F0048BDE6 /* Assets.xcassets */; };
 		FF82481E2932679F0048BDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF82481C2932679F0048BDE6 /* LaunchScreen.storyboard */; };
+		FF824828293268D90048BDE6 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824827293268D90048BDE6 /* KeyboardViewController.swift */; };
+		FF82482A293268EF0048BDE6 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824829293268EF0048BDE6 /* BoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FF82481A2932679F0048BDE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF82481D2932679F0048BDE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF82481F2932679F0048BDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF824827293268D90048BDE6 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		FF824829293268EF0048BDE6 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		FF8248102932679D0048BDE6 /* Wordle-Clone.App */ = {
 			isa = PBXGroup;
 			children = (
-				FF8248112932679D0048BDE6 /* AppDelegate.swift */,
-				FF8248132932679D0048BDE6 /* SceneDelegate.swift */,
-				FF8248152932679D0048BDE6 /* ViewController.swift */,
-				FF8248172932679D0048BDE6 /* Main.storyboard */,
-				FF82481A2932679F0048BDE6 /* Assets.xcassets */,
-				FF82481C2932679F0048BDE6 /* LaunchScreen.storyboard */,
+				FF8248262932687F0048BDE6 /* Other */,
+				FF824825293268750048BDE6 /* Core */,
 				FF82481F2932679F0048BDE6 /* Info.plist */,
 			);
 			path = "Wordle-Clone.App";
+			sourceTree = "<group>";
+		};
+		FF824825293268750048BDE6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FF8248152932679D0048BDE6 /* ViewController.swift */,
+				FF824827293268D90048BDE6 /* KeyboardViewController.swift */,
+				FF824829293268EF0048BDE6 /* BoardViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FF8248262932687F0048BDE6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FF8248112932679D0048BDE6 /* AppDelegate.swift */,
+				FF8248132932679D0048BDE6 /* SceneDelegate.swift */,
+				FF8248172932679D0048BDE6 /* Main.storyboard */,
+				FF82481A2932679F0048BDE6 /* Assets.xcassets */,
+				FF82481C2932679F0048BDE6 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +163,8 @@
 				FF8248162932679D0048BDE6 /* ViewController.swift in Sources */,
 				FF8248122932679D0048BDE6 /* AppDelegate.swift in Sources */,
 				FF8248142932679D0048BDE6 /* SceneDelegate.swift in Sources */,
+				FF824828293268D90048BDE6 /* KeyboardViewController.swift in Sources */,
+				FF82482A293268EF0048BDE6 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
