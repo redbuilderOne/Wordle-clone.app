@@ -77,12 +77,16 @@ extension KeyboardViewController: UICollectionViewDelegateFlowLayout, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 
-        let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
+        var left: CGFloat = 1
+        var right: CGFloat = 1
 
+        let margin: CGFloat = 20
+        let size: CGFloat = (collectionView.frame.size.width - margin) / 10
+        let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
         let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count))
 
-        let left = inset
-        let right = inset
+        left = inset
+        right = inset
 
         return UIEdgeInsets(
             top: 2,
