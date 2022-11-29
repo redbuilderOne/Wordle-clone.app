@@ -15,6 +15,7 @@
 		FF82481E2932679F0048BDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF82481C2932679F0048BDE6 /* LaunchScreen.storyboard */; };
 		FF824828293268D90048BDE6 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824827293268D90048BDE6 /* KeyboardViewController.swift */; };
 		FF82482A293268EF0048BDE6 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824829293268EF0048BDE6 /* BoardViewController.swift */; };
+		FF82483329366DE00048BDE6 /* KeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82483229366DE00048BDE6 /* KeyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FF82481F2932679F0048BDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF824827293268D90048BDE6 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		FF824829293268EF0048BDE6 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		FF82483229366DE00048BDE6 /* KeyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				FF8248152932679D0048BDE6 /* ViewController.swift */,
 				FF824827293268D90048BDE6 /* KeyboardViewController.swift */,
 				FF824829293268EF0048BDE6 /* BoardViewController.swift */,
+				FF82483229366DE00048BDE6 /* KeyCollectionViewCell.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				FF8248162932679D0048BDE6 /* ViewController.swift in Sources */,
 				FF8248122932679D0048BDE6 /* AppDelegate.swift in Sources */,
+				FF82483329366DE00048BDE6 /* KeyCollectionViewCell.swift in Sources */,
 				FF8248142932679D0048BDE6 /* SceneDelegate.swift in Sources */,
 				FF824828293268D90048BDE6 /* KeyboardViewController.swift in Sources */,
 				FF82482A293268EF0048BDE6 /* BoardViewController.swift in Sources */,
