@@ -70,11 +70,26 @@ extension KeyboardViewController: UICollectionViewDelegateFlowLayout, UICollecti
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 50, height: 50)
+        let margin: CGFloat = 20
+        let size: CGFloat = (collectionView.frame.size.width - margin) / 10
+        return CGSize(width: size, height: size * 1.5)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .zero
+
+        let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
+
+        let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count))
+
+        let left = inset
+        let right = inset
+
+        return UIEdgeInsets(
+            top: 2,
+            left: left,
+            bottom: 2,
+            right: right
+        )
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
