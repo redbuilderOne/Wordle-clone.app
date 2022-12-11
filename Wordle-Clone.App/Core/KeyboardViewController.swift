@@ -44,7 +44,7 @@ class KeyboardViewController: UIViewController {
         let collectionViewConstraints = [
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
 
@@ -65,6 +65,10 @@ extension KeyboardViewController: UICollectionViewDelegateFlowLayout, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeyCollectionViewCell.identifier, for: indexPath) as? KeyCollectionViewCell else { fatalError() }
+
+        let letter = keys[indexPath.section][indexPath.row]
+        cell.configure(with: letter)
+
         return cell
     }
 
@@ -83,13 +87,7 @@ extension KeyboardViewController: UICollectionViewDelegateFlowLayout, UICollecti
         let size: CGFloat = (collectionView.frame.size.width - margin) / 10
         let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
         let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count)) / 2
-        
 
-//        let margin: CGFloat = 20
-//        let size: CGFloat = (collectionView.frame.size.width - margin) / 10
-//        let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
-//        let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count))
-//
         left = inset
         right = inset
 
