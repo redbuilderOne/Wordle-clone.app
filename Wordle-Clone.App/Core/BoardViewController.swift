@@ -36,8 +36,8 @@ class BoardViewController: UIViewController {
 
     private func activateConstraints() {
         let collectionViewConstraints = [
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
@@ -60,7 +60,6 @@ extension BoardViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeyCollectionViewCell.identifier, for: indexPath) as? KeyCollectionViewCell else { fatalError() }
 
-        cell.configure(with: Character("A"))
         cell.contentView.backgroundColor = nil
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.systemGray3.cgColor
