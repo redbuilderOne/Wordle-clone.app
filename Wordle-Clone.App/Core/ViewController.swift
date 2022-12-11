@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let answer = "after"
+    private var guesses: [[Character?]] = Array(
+        repeating: Array(repeating: nil, count: 5),
+        count: 6
+    )
+
     let keyboardVC = KeyboardViewController()
     let boardVC = BoardViewController()
 
@@ -28,6 +34,7 @@ class ViewController: UIViewController {
         addChild(boardVC)
         boardVC.didMove(toParent: self)
         boardVC.view.translatesAutoresizingMaskIntoConstraints = false
+        boardVC.dataSource = self
         view.addSubview(boardVC.view)
 
         addConstraints()
@@ -56,9 +63,29 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: BoardViewControllerDataSource {
+    var currentGuesses: [[Character?]] {
+        return guesses
+    }
+
+}
+
 extension ViewController: KeyboardViewControllerDelegate {
     func keyboardViewController(_ viewController: KeyboardViewController, didTapKey letter: Character) {
-        print(letter)
+        var stop = false
+        for i in 0..<guesses.count {
+            for j in 0..<guesses[i].count {
+                if guesses[i][j] == nil {
+                    guesses[i][j] = letter
+                    stop = true
+                    break
+                }
+            }
+            if stop {
+                break
+            }
+        }
+        boardVC.reloadData()
     }
 
 }
