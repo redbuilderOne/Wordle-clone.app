@@ -17,7 +17,7 @@ class KeyboardViewController: UIViewController {
         layout.minimumInteritemSpacing = 2
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .green
+        collectionView.backgroundColor = .clear
         collectionView.register(KeyCollectionViewCell.self, forCellWithReuseIdentifier: KeyCollectionViewCell.identifier)
         return collectionView
     }()
@@ -29,7 +29,6 @@ class KeyboardViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        view.backgroundColor = .red
         activateConstraints()
         appendCharacters()
     }
@@ -83,8 +82,14 @@ extension KeyboardViewController: UICollectionViewDelegateFlowLayout, UICollecti
         let margin: CGFloat = 20
         let size: CGFloat = (collectionView.frame.size.width - margin) / 10
         let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
-        let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count))
+        let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count)) / 2
+        
 
+//        let margin: CGFloat = 20
+//        let size: CGFloat = (collectionView.frame.size.width - margin) / 10
+//        let count: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
+//        let inset: CGFloat = (collectionView.frame.size.width - (size * count) - (2 * count))
+//
         left = inset
         right = inset
 
